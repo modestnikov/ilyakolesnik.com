@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Персональный сайт Ильи Колесникова: art, motion and creative practice.">
+    <title>Илья Колесников</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Raleway:wght@200;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=20260604-layout-13">
+  </head>
+  <body>
+    <main class="home" aria-label="Главная страница">
+      <div class="video-stage" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline poster="./assets/hero-poster.jpg">
+          <source src="./assets/background.mp4?v=20260604-2048" type="video/mp4">
+        </video>
+        <div class="video-fallback"></div>
+        <div class="shade"></div>
+      </div>
+
+      <section class="hero" id="top">
+        <p class="tagline">creative practice</p>
+
+        <div class="hero-copy">
+          <h1 class="name-title" aria-label="илья колесников">
+            <span aria-hidden="true">
+              <span class="char">и</span><span class="char">л</span><span class="char">ь</span><span class="char">я</span>
+              <span class="char space"> </span>
+              <span class="char">к</span><span class="char">о</span><span class="char">л</span><span class="char">е</span><span class="char">с</span><span class="char">н</span><span class="char">и</span><span class="char">к</span><span class="char">о</span><span class="char">в</span>
+            </span>
+          </h1>
+
+          <nav class="primary-sections" aria-label="Основные разделы">
+            <a href="./art/" class="section-link" aria-label="art"><span aria-hidden="true"><span class="char">a</span><span class="char">r</span><span class="char">t</span></span></a>
+            <a href="./motion/" class="section-link" aria-label="motion"><span aria-hidden="true"><span class="char">m</span><span class="char">o</span><span class="char">t</span><span class="char">i</span><span class="char">o</span><span class="char">n</span></span></a>
+          </nav>
+        </div>
+
+        <details class="social-drawer">
+          <summary>links +</summary>
+          <ul class="social-list" aria-label="Социальные ссылки">
+            <li><a href="#" aria-disabled="true">Instagram</a></li>
+            <li><a href="#" aria-disabled="true">Behance</a></li>
+            <li><a href="#" aria-disabled="true">Vimeo</a></li>
+            <li><a href="#" aria-disabled="true">YouTube</a></li>
+            <li><a href="#" aria-disabled="true">Telegram</a></li>
+            <li><a href="#" aria-disabled="true">X / Twitter</a></li>
+            <li><a href="#" aria-disabled="true">LinkedIn</a></li>
+            <li><a href="#" aria-disabled="true">Email</a></li>
+          </ul>
+        </details>
+      </section>
+    </main>
+    <script src="./script.js?v=20260604-layout-13"></script>
+  </body>
+</html>
