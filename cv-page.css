@@ -1,0 +1,73 @@
+.cv-page {
+  min-height: calc(100vh - var(--header-height));
+  padding: 54px var(--pad) 80px;
+  background: var(--paper);
+}
+
+.cv-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1500px;
+}
+
+.cv-switch {
+  display: flex;
+  gap: 12px;
+  margin: 0 0 28px;
+}
+
+.cv-switch button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cv-switch button[aria-pressed="true"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cv-language {
+  max-width: 760px;
+}
+
+.cv-language h1 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.cv-language h2 {
+  margin: 28px 0 8px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.cv-language p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.cv-language a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .cv-page {
+    padding-top: 44px;
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
