@@ -1,4 +1,5 @@
 import { projects } from "./data/projects.js?v=20260929-white-cube-1";
+import "./analytics.js?v=20261001-1";
 
 const video = document.querySelector(".hero-video");
 const projectGrid = document.querySelector(".project-grid");
