@@ -6,6 +6,7 @@ const slug = page?.dataset.projectSlug;
 const project = projects.find((item) => item.slug === slug);
 const socialDrawer = document.querySelector(".social-drawer");
 const socialToggle = document.querySelector(".social-toggle");
+const siteHeader = document.querySelector(".site-header");
 
 const createTextBlock = (language, label, paragraphs) => {
   const section = document.createElement("section");
@@ -267,8 +268,12 @@ if (!page || !project) {
 if (socialDrawer && socialToggle) {
   const setSocialOpen = (isOpen) => {
     socialDrawer.classList.toggle("is-open", isOpen);
+    siteHeader?.classList.toggle("menu-open", isOpen);
     socialToggle.setAttribute("aria-expanded", String(isOpen));
+    socialToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   };
+
+  socialToggle.setAttribute("aria-label", "Open menu");
 
   socialToggle.addEventListener("click", () => {
     setSocialOpen(!socialDrawer.classList.contains("is-open"));

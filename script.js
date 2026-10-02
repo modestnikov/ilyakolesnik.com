@@ -11,6 +11,7 @@ const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const navFilters = [...document.querySelectorAll(".nav-filter")];
 const socialDrawer = document.querySelector(".social-drawer");
 const socialToggle = document.querySelector(".social-toggle");
+const siteHeader = document.querySelector(".site-header");
 
 const shuffleProjects = (items) => {
   const shuffled = [...items];
@@ -472,8 +473,12 @@ tagsMarqueeTrack?.addEventListener("click", (event) => {
 if (socialDrawer && socialToggle) {
   const setSocialOpen = (isOpen) => {
     socialDrawer.classList.toggle("is-open", isOpen);
+    siteHeader?.classList.toggle("menu-open", isOpen);
     socialToggle.setAttribute("aria-expanded", String(isOpen));
+    socialToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   };
+
+  socialToggle.setAttribute("aria-label", "Open menu");
 
   socialToggle.addEventListener("click", () => {
     setSocialOpen(!socialDrawer.classList.contains("is-open"));

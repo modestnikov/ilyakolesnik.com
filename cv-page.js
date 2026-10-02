@@ -2,6 +2,7 @@ const languageButtons = [...document.querySelectorAll("[data-cv-language]")];
 const languagePanels = [...document.querySelectorAll("[data-cv-panel]")];
 const socialDrawer = document.querySelector(".social-drawer");
 const socialToggle = document.querySelector(".social-toggle");
+const siteHeader = document.querySelector(".site-header");
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -20,8 +21,12 @@ languageButtons.forEach((button) => {
 if (socialDrawer && socialToggle) {
   const setSocialOpen = (isOpen) => {
     socialDrawer.classList.toggle("is-open", isOpen);
+    siteHeader?.classList.toggle("menu-open", isOpen);
     socialToggle.setAttribute("aria-expanded", String(isOpen));
+    socialToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   };
+
+  socialToggle.setAttribute("aria-label", "Open menu");
 
   socialToggle.addEventListener("click", () => {
     setSocialOpen(!socialDrawer.classList.contains("is-open"));
