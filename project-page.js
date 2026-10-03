@@ -1,4 +1,4 @@
-import { projects } from "./data/projects.js?v=20260929-white-cube-6";
+import { projects } from "./data/projects.js?v=20261002-inspector-1";
 import "./analytics.js?v=20261001-1";
 
 const page = document.querySelector(".project-page");
@@ -113,7 +113,7 @@ const createMediaElement = (asset, title, mediaVersion) => {
 
   const version = mediaVersion ? `?v=${encodeURIComponent(mediaVersion)}` : "";
 
-  if (asset.endsWith(".mp4")) {
+  if (/\.(mp4|webm)$/i.test(asset)) {
     const video = document.createElement("video");
 
     video.src = `../../${asset}${version}`;
@@ -129,6 +129,66 @@ const createMediaElement = (asset, title, mediaVersion) => {
   image.src = `../../${asset}${version}`;
   image.alt = title;
   return image;
+};
+
+const setupFreeGallery = (gallery) => {
+  const items = [...gallery.querySelectorAll(".project-media-item")];
+  let topLayer = items.length + 1;
+
+  const seededValue = (index, salt) => {
+    const value = Math.sin((index + 1) * 9283.17 + salt * 167.31) * 43758.5453;
+    return value - Math.floor(value);
+  };
+
+  items.forEach((item, index) => {
+    const isCompact = window.matchMedia("(max-width: 720px)").matches;
+    const width = isCompact
+      ? 24 + seededValue(index, 4) * 30
+      : 10 + seededValue(index, 4) * 25;
+    const left = seededValue(index, 1) * (100 - width);
+    const top = Math.pow(seededValue(index, 2), 1.65) * 82;
+
+    item.style.left = `${left}%`;
+    item.style.top = `${top}%`;
+    item.style.width = `${width}%`;
+    item.style.zIndex = String(index + 1);
+    item.querySelector("img")?.setAttribute("draggable", "false");
+
+    item.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0 && event.pointerType === "mouse") return;
+
+      const galleryRect = gallery.getBoundingClientRect();
+      const itemRect = item.getBoundingClientRect();
+      const offsetX = event.clientX - itemRect.left;
+      const offsetY = event.clientY - itemRect.top;
+
+      topLayer += 1;
+      item.style.zIndex = String(topLayer);
+      item.classList.add("is-dragging");
+      item.setPointerCapture(event.pointerId);
+
+      const moveItem = (moveEvent) => {
+        const maxLeft = Math.max(0, galleryRect.width - item.offsetWidth);
+        const maxTop = Math.max(0, galleryRect.height - item.offsetHeight);
+        const nextLeft = Math.min(maxLeft, Math.max(0, moveEvent.clientX - galleryRect.left - offsetX));
+        const nextTop = Math.min(maxTop, Math.max(0, moveEvent.clientY - galleryRect.top - offsetY));
+
+        item.style.left = `${nextLeft}px`;
+        item.style.top = `${nextTop}px`;
+      };
+
+      const stopDragging = () => {
+        item.classList.remove("is-dragging");
+        item.removeEventListener("pointermove", moveItem);
+        item.removeEventListener("pointerup", stopDragging);
+        item.removeEventListener("pointercancel", stopDragging);
+      };
+
+      item.addEventListener("pointermove", moveItem);
+      item.addEventListener("pointerup", stopDragging);
+      item.addEventListener("pointercancel", stopDragging);
+    });
+  });
 };
 
 if (!page || !project) {
@@ -246,6 +306,10 @@ if (!page || !project) {
     });
 
     page.append(figure);
+
+    if (project.mediaLayout === "free-gallery") {
+      setupFreeGallery(figure);
+    }
   }
 
   if (project.description.ru.length || project.description.en.length) {

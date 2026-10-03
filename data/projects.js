@@ -1,5 +1,18 @@
 export const projects = [
   {
+    "slug": "inspector",
+    "title": "Инспектор",
+    "section": "art",
+    "year": "",
+    "tags": [],
+    "medium": [],
+    "media": [],
+    "description": {
+      "ru": [],
+      "en": []
+    }
+  },
+  {
     "slug": "victory-im-winning-dad",
     "title": "$VICTORY. I'm winning, dad!",
     "section": "art",
@@ -243,7 +256,7 @@ export const projects = [
   },
   {
     "slug": "outlines-of-events",
-    "title": "Outlines of Events",
+    "title": "Outlines of events",
     "section": "art",
     "year": "2020–",
     "tags": [
@@ -259,7 +272,38 @@ export const projects = [
       "ink"
     ],
     "cover": "assets/projects/outlines-of-events/cover.jpg",
-    "media": [],
+    "mediaLayout": "free-gallery",
+    "mediaVersion": "20261002-1127",
+    "media": [
+      "assets/projects/outlines-of-events/2.jpg",
+      "assets/projects/outlines-of-events/3.jpg",
+      "assets/projects/outlines-of-events/Dads_rest-1.jpg",
+      "assets/projects/outlines-of-events/Dads_rest.jpg",
+      "assets/projects/outlines-of-events/Flowers.jpg",
+      "assets/projects/outlines-of-events/IMG_2044.jpg",
+      "assets/projects/outlines-of-events/IMG_2045.jpg",
+      "assets/projects/outlines-of-events/IMG_2046.jpg",
+      "assets/projects/outlines-of-events/IMG_2047.jpg",
+      "assets/projects/outlines-of-events/IMG_2049.jpg",
+      "assets/projects/outlines-of-events/IMG_2050.jpg",
+      "assets/projects/outlines-of-events/IMG_2051.jpg",
+      "assets/projects/outlines-of-events/IMG_5037.jpg",
+      "assets/projects/outlines-of-events/IMG_5039.jpg",
+      "assets/projects/outlines-of-events/IMG_8415.jpg",
+      "assets/projects/outlines-of-events/_до.jpg",
+      "assets/projects/outlines-of-events/coin1.jpg",
+      "assets/projects/outlines-of-events/gbou.jpg",
+      "assets/projects/outlines-of-events/Автопортрет-в-Липецке.jpg",
+      "assets/projects/outlines-of-events/Гусар.jpg",
+      "assets/projects/outlines-of-events/Иллюстрация_без_названия-2.jpg",
+      "assets/projects/outlines-of-events/Иллюстрация_без_названия-3.jpg",
+      "assets/projects/outlines-of-events/Иллюстрация_без_названия.jpg",
+      "assets/projects/outlines-of-events/гусар —-копия.jpg",
+      "assets/projects/outlines-of-events/зоя.jpg",
+      "assets/projects/outlines-of-events/коса.jpg",
+      "assets/projects/outlines-of-events/новый-год.jpg",
+      "assets/projects/outlines-of-events/танк.jpg"
+    ],
     "description": {
       "ru": [
         "Серия Outlines of Events возникает из практики превращения домашних фотографий в раскраски для детей. Изображения сводятся к контурным схемам, превращаясь в своеобразные шаблоны, открытые для дальнейшего вмешательства. Первоначально созданные как часть семейной игры, эти контурные рисунки постепенно становятся самостоятельным художественным методом, в котором механически обработанное изображение вновь наполняется цветом и жестом ручной работы.",
@@ -366,28 +410,44 @@ export const projects = [
   {
     "slug": "pink-berets",
     "title": "Pink Berets / Розовые береты",
+    "titleLines": [
+      "Pink Berets /",
+      "Розовые береты"
+    ],
     "section": "art",
-    "year": "2025",
+    "year": "2025–ongoing",
     "tags": [
       "video",
       "AI",
-      "satire"
-    ],
-    "medium": [
-      "AI-generated video",
-      "digital video",
+      "satire",
       "internet"
     ],
+    "medium": [
+      "AI video"
+    ],
+    "links": [
+      {
+        "label": "instagram",
+        "url": "https://www.instagram.com/p/DcjHmWlAyJ3/"
+      }
+    ],
     "cover": "assets/projects/pink-berets/cover.jpg",
-    "media": [],
+    "mediaLayout": "pink-berets",
+    "mediaVersion": "20261002-1031",
+    "media": [
+      "assets/projects/pink-berets/media1.jpg",
+      "assets/projects/pink-berets/media2.mp4",
+      "assets/projects/pink-berets/media3.mp4",
+      "assets/projects/pink-berets/media4.mp4"
+    ],
     "description": {
       "ru": [
-        "Розовые береты – серия коротких AI-видео, исследующих образ современного художника как набора устойчивых визуальных и поведенческих клише. Центральный персонаж проекта – архетипическая фигура в розовом берете и сером оверсайз-пальто, существующая не как индивидуальность, а как меметическая конструкция, собранная из узнаваемых признаков художественной среды. Каждый ролик разворачивает отдельную ситуацию, в которой художественная идентичность воспроизводится через повторение культурных шаблонов.",
-        "Проект рассматривает арт-мир как систему алгоритмически воспроизводимых жестов, где перформанс, выставка, резиденция или публичное высказывание становятся взаимозаменяемыми формами культурного поведения. Используя нейросетевое видео как художественный инструмент, Розовые береты исследуют механизмы самоидентификации, самоиронии и институциональной репрезентации, показывая художника одновременно как автора, образ и медиапродукт."
+        "Pink Berets – продолжающийся проект, созданный средствами генеративного видео и построенный вокруг вымышленной фигуры современного художника с неизменным визуальным образом. Он появляется в пространствах художественного производства и репрезентации – на выставках и ярмарках, в мастерских, на конференциях, публичных дискуссиях и перформансах. Отдельные эпизоды складываются в постепенно расширяющуюся биографию персонажа, где правдоподобные ситуации соседствуют с абсурдными и заведомо невозможными.",
+        "Проект использует визуальный язык документальной, любительской и архивной съёмки. Каждый новый эпизод становится очередным свидетельством из жизни персонажа, существующего одновременно внутри реального арт-контекста и собственной вымышленной истории."
       ],
       "en": [
-        "Pink Berets is a series of short AI-generated videos exploring the contemporary artist as a collection of recurring visual and behavioral clichés. The central figure–wearing a pink beret and an oversized gray coat–functions not as an individual but as a memetic construct assembled from recognizable signs of the art world. Each episode presents a different situation in which artistic identity is reproduced through the repetition of familiar cultural patterns.",
-        "The project approaches the art world as a system of algorithmically repeatable gestures, where performances, exhibitions, residencies, and public appearances become interchangeable forms of cultural behavior. Using AI-generated video as its primary medium, Pink Berets examines mechanisms of self-identification, self-irony, and institutional representation, presenting the artist simultaneously as author, image, and media product."
+        "Pink Berets is an ongoing project created through generative video and centered on a fictional contemporary artist with an unchanging visual identity. He appears across spaces of artistic production and representation – at exhibitions and art fairs, in studios, at conferences, public discussions, and performances. Individual episodes gradually accumulate into an expanding biography of the character, in which plausible situations coexist with the absurd and the manifestly impossible.",
+        "The project adopts the visual language of documentary, amateur, and archival footage. Each new episode becomes another piece of evidence from the life of a character who exists simultaneously within the real context of the art world and within his own fictional history."
       ]
     }
   },
@@ -732,7 +792,12 @@ export const projects = [
       "After Effects"
     ],
     "cover": "assets/projects/ai-fragments/cover.jpg",
-    "media": [],
+    "mediaLayout": "ai-fragments",
+    "mediaVersion": "20261002-1110",
+    "media": [
+      "assets/projects/ai-fragments/5ka_fruits_3200x1472.webm",
+      "assets/projects/ai-fragments/cover_hover.webm"
+    ],
     "description": {
       "ru": [
         "Заставка на экраны для бизнес-завтрака Билайна."

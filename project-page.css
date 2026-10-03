@@ -298,6 +298,91 @@ button {
   object-fit: contain;
 }
 
+.project-hero[data-layout="pink-berets"] {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  background: var(--paper);
+}
+
+.project-hero[data-layout="pink-berets"] .project-media-item:first-child {
+  flex: 1.066 1 0;
+  aspect-ratio: 1500 / 1407;
+}
+
+.project-hero[data-layout="pink-berets"] .project-media-item:nth-child(n + 2) {
+  flex: 0.5625 1 0;
+  aspect-ratio: 9 / 16;
+  background: #050505;
+}
+
+.project-hero[data-layout="ai-fragments"] {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  background: var(--paper);
+}
+
+.project-hero[data-layout="ai-fragments"] .project-media-item:first-child {
+  flex: 2.174 1 0;
+  aspect-ratio: 1600 / 736;
+}
+
+.project-hero[data-layout="ai-fragments"] .project-media-item:nth-child(2) {
+  flex: 1.776 1 0;
+  aspect-ratio: 888 / 500;
+}
+
+.project-hero[data-layout="free-gallery"] {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  height: 100%;
+  overflow: visible;
+  background: transparent;
+  touch-action: pan-y;
+}
+
+.project-page[data-project-slug="outlines-of-events"] {
+  position: relative;
+  min-height: clamp(1500px, 135vw, 1900px);
+  overflow: hidden;
+}
+
+.project-page[data-project-slug="outlines-of-events"] .project-intro,
+.project-page[data-project-slug="outlines-of-events"] .project-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.project-page[data-project-slug="outlines-of-events"] .project-copy {
+  transform: translateY(120%);
+}
+
+.project-hero[data-layout="free-gallery"] .project-media-item {
+  position: absolute;
+  min-width: 120px;
+  max-width: 520px;
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.project-hero[data-layout="free-gallery"] .project-media-item.is-dragging {
+  cursor: grabbing;
+}
+
+.project-hero[data-layout="free-gallery"] img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
 .project-hero[data-layout="white-cube"] {
   display: flex;
   flex-wrap: nowrap;
@@ -581,6 +666,29 @@ button {
 
   .project-hero[data-layout="white-cube"] .project-media-item:nth-child(3) {
     aspect-ratio: 3149 / 2672;
+  }
+
+  .project-hero[data-layout="pink-berets"] {
+    display: flex;
+    align-items: stretch;
+    gap: 2px;
+    overflow-x: auto;
+  }
+
+  .project-hero[data-layout="pink-berets"] .project-media-item:first-child {
+    flex: 0 0 100%;
+  }
+
+  .project-hero[data-layout="pink-berets"] .project-media-item:nth-child(n + 2) {
+    flex: 0 0 72vw;
+  }
+
+  .project-hero[data-layout="free-gallery"] {
+    height: 100%;
+  }
+
+  .project-page[data-project-slug="outlines-of-events"] {
+    min-height: 2600px;
   }
 }
 

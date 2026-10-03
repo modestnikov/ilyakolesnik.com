@@ -1,4 +1,4 @@
-import { projects } from "./data/projects.js?v=20260929-white-cube-1";
+import { projects } from "./data/projects.js?v=20261002-inspector-1";
 import "./analytics.js?v=20261001-1";
 
 const video = document.querySelector(".hero-video");
@@ -33,7 +33,7 @@ const filterAliases = {
 };
 
 const hoverVideoExtensions = {
-  "ai-fragments": ["mp4"],
+  "ai-fragments": ["webm", "mp4"],
   "artist-is-absent": ["webm", "mp4"],
   bghvyn: ["webm", "mp4"],
   decerts: ["webm", "mp4"],
@@ -46,7 +46,7 @@ const hoverVideoExtensions = {
   "muzei-moskovskogo-kremlya": ["mp4"],
   "park-live-festival": ["mp4"],
   petix: ["webm", "mp4"],
-  "pink-berets": ["mp4"],
+  "pink-berets": ["webm", "mp4"],
   psb: ["mp4"],
   "reklama-media-arta": ["webm"],
   souper: ["mp4"],
