@@ -273,7 +273,7 @@ export const projects = [
     ],
     "cover": "assets/projects/outlines-of-events/cover.jpg",
     "mediaLayout": "free-gallery",
-    "mediaVersion": "20261002-1127",
+    "mediaVersion": "20261003-1630",
     "media": [
       "assets/projects/outlines-of-events/2.jpg",
       "assets/projects/outlines-of-events/3.jpg",
@@ -301,7 +301,7 @@ export const projects = [
       "assets/projects/outlines-of-events/гусар —-копия.jpg",
       "assets/projects/outlines-of-events/зоя.jpg",
       "assets/projects/outlines-of-events/коса.jpg",
-      "assets/projects/outlines-of-events/новый-год.jpg",
+      "assets/projects/outlines-of-events/new-year.jpg",
       "assets/projects/outlines-of-events/танк.jpg"
     ],
     "description": {

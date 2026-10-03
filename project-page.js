@@ -1,4 +1,4 @@
-import { projects } from "./data/projects.js?v=20261002-inspector-1";
+import { projects } from "./data/projects.js?v=20261003-outlines-path-1";
 import "./analytics.js?v=20261001-1";
 
 const page = document.querySelector(".project-page");
